@@ -291,9 +291,3 @@ plt.ylabel('HDL Cholesterol')
 plt.legend(title='Combined Cluster')
 plt.show()
 
-# Print the number of patients from each text and image cluster in each new combined cluster
-for combined_cluster in combined_cluster_counts['Cluster_Text_Mapped'].unique():
-    print(f"Combined Cluster {combined_cluster}:")
-    cluster_data = combined_cluster_counts[combined_cluster_counts['Cluster_Text_Mapped'] == combined_cluster]
-    for _, row in cluster_data.iterrows():
-        print(f"  Text Cluster {row['Cluster_Text']}: {row['Count']} patients, Image Cluster {row['Cluster_Image']}: {row['Count']} patients")

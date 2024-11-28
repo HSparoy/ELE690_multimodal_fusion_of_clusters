@@ -24,3 +24,4 @@ to create clusters with any trained model run gmm.py and import the model in lin
 In trained_predictions.py use K-Means for triplet loss training by uncommenting lines 99-102 and commenting lines 106-109 and make sure line 155 says pseudo_labels = kmeans.fit_predict(features).
 To run Gaussian mixture model for triplet loss training uncomment lines 106-109 and comment lines 99-102 and make sure line 155 says pseudo_labels = gmm.fit_predict(features).
 To use K-means for the final clustering uncomment lines 201-203 and comment lines 207-209. To use Gaussian mixture model for the final clustering uncomment lines 207-209 and comment lines 201-203.
+To save the model from trained_predictions set the name in the variable model_name='x' on line 72. the model will then be named x.keras and the model after triplet loss tuning will be named x_tuned.keras. To spesifically save the cluster model used in the triplet loss training set the name on line 214.
